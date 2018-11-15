@@ -6,91 +6,142 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Meditation studies - Data Visualization Project</title>
-     
+
     <!-- bootstrap css -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <!-- dc css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dc/2.1.8/dc.min.css" />
     <!-- style css -->
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
-    
+
 </head>
 
 <body>
-    
+
     <!-- Describing the project's name and usefulness of meditating -->
     <header>
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
                     <h1 class="h1 text-center">Meditation</h1>
-            <p class="p1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea rerum eligendi cumque cum reiciendis provident assumenda, nihil qui ullam, iusto natus eaque voluptatibus porro quis modi eos vel repellat debitis.</p>
+                    <p class="p1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea rerum eligendi cumque cum reiciendis provident assumenda, nihil qui ullam, iusto natus eaque voluptatibus porro quis modi eos vel repellat debitis.</p>
                 </div>
             </div>
         </div>
     </header>
     <main>
-        <section><!-- Show the research paper by year / cateogory -->
+        <section>
+            <!-- Show the research paper by year / cateogory -->
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>Testing Groups selectMenu</h2>
+                    </div>
+                    <div class="col-12">
+                        <div id="groups"></div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section>
+            <!-- Category subject for research paper -->
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>Testing pieChart Participants per Gender </h2>
+                    </div>
+                    <div class="col-12">
+                        <div id="participants"></div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section>
+            <!-- Search research paper by year -->
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>TEsting rowChart - improvement per group </h2>
+                    </div>
+                    <div class="col-12">
+                        <div id="results"></div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+         <section>
+            <!-- Search research paper by year -->
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>TEsting Condition CSV</h2>
+                    </div>
+                    <div class="col-12">
+                        <div id="medicalCondition"></div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
         
-        <div class="container">
-            <div class="row">
-                <div class="col-12"><h2>Testing Groups selectMenu</h2>
-                </div>
-                <div class="col-12">
-                    <div id="groups"></div>
-                </div>
-            </div>
-        </div>
-            
-        </section>
-        <section><!-- Category subject for research paper -->
-      
-        <div class="container">
-            <div class="row">
-                <div class="col-12">  <h2>Testing pieChart Participants per Gender </h2></div>
-                <div class="col-12">
-                    <div id="participants"></div>
+        <section>
+            <!-- Search research paper by year -->
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>TEsting Results medical Condition</h2>
+                    </div>
+                    <div class="col-12">
+                        <div id="results2"></div>
+                    </div>
                 </div>
             </div>
-        </div>
-            
+
         </section>
-         <section><!-- Search research paper by year -->
-       
-        <div class="container">
-            <div class="row">
-                 <div class="col-12">  <h2>TEsting rowChart - improvement per group </h2></div>
-                <div class="col-12">
-                    <div id="results"></div>
+        <section>
+            <!-- Search research paper by year -->
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>TEsting Results medical Condition</h2>
+                    </div>
+                    <div class="col-12">
+                        <div id="results3"></div>
+                    </div>
                 </div>
             </div>
-        </div>
-            
+
         </section>
-         
     </main>
     <footer>
 
     </footer>
-    
+
     <!--Bootstrap and D3, DC, Crossfilter, Query scripts-->
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crossfilter/1.3.12/crossfilter.min.js"></script>
 
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dc/2.1.8/dc.min.js"></script>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-    crossorigin="anonymous"></script>
-
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-    crossorigin="anonymous"></script>
- <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/crossfilter/1.3.12/crossfilter.min.js"></script>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/dc/2.1.8/dc.min.js"></script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/queue-async/1.0.7/queue.min.js"></script>
-     <!-- Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/queue-async/1.0.7/queue.min.js"></script>
+    <!-- Script -->
     <script type="text/javascript" src="assets/js/script.js"></script>
 </body>
 
