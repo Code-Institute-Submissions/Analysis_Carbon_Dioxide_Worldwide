@@ -16,7 +16,7 @@ function makeResults(error, reikiDataGroups, reikiStudyCondition) {
     show_improvement_percentage_per_med_cond(ndx1);
 
     dc.renderAll();
-}
+};
 
 function show_groups_selector(ndx) {
 
@@ -27,7 +27,7 @@ function show_groups_selector(ndx) {
         .dimension(groupDim)
         .group(dimGroup);
 
-}
+};
 
 function show_gender(ndx) {
     var group_dim = ndx.dimension(dc.pluck('Gender'));
@@ -40,7 +40,7 @@ function show_gender(ndx) {
         .innerRadius(100)
         .dimension(group_dim)
         .group(total_number_of_persons);
-}
+};
 
 function show_improvement_percentage_per_gender(ndx) {
     var improveP = ndx.dimension(dc.pluck('improveP'));
@@ -54,7 +54,7 @@ function show_improvement_percentage_per_gender(ndx) {
         .renderLabel(true)
         .elasticX(true)
         .xAxis().ticks(4);
-}
+};
 
 function show_medical_condition(ndx1) {
     var groupsDim = ndx1.dimension(dc.pluck('Groups'));
@@ -63,7 +63,7 @@ function show_medical_condition(ndx1) {
     dc.selectMenu("#medicalCondition")
         .dimension(groupsDim)
         .group(groupG);
-}
+};
 
 function show_improvement_percentage_per_med_cond(ndx1) {
     var groupsDim = ndx1.dimension(dc.pluck('Groups'));
@@ -117,6 +117,4 @@ function show_improvement_percentage_per_med_cond(ndx1) {
         .xAxisLabel("Medical Condition")
         .yAxis().ticks(4);
 
-
-
-}
+};
