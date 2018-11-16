@@ -1,7 +1,8 @@
+$(document).ready(function(){
 //Using Queue.js for waiting the external data to be loaded
 queue()
-    .defer(d3.csv, "/data/Reiki_study_data.csv")
-    .defer(d3.csv, "/data/Reiki_study_condition.csv")
+    .defer(d3.csv, "../data/Reiki_study_data.csv")
+    .defer(d3.csv, "../data/Reiki_study_condition.csv")
     .await(makeResults);
 
 function makeResults(error, reikiDataGroups, reikiStudyCondition) {
@@ -16,7 +17,7 @@ function makeResults(error, reikiDataGroups, reikiStudyCondition) {
     show_improvement_percentage_per_med_cond(ndx1);
 
     dc.renderAll();
-};
+}
 
 function show_groups_selector(ndx) {
 
@@ -27,7 +28,7 @@ function show_groups_selector(ndx) {
         .dimension(groupDim)
         .group(dimGroup);
 
-};
+}
 
 function show_gender(ndx) {
     var group_dim = ndx.dimension(dc.pluck('Gender'));
@@ -36,25 +37,26 @@ function show_gender(ndx) {
     dc.pieChart("#participants")
         .width(768)
         .height(480)
-        .slicesCap(4)
-        .innerRadius(100)
+        .innerRadius(20)
         .dimension(group_dim)
         .group(total_number_of_persons);
-};
+}
 
 function show_improvement_percentage_per_gender(ndx) {
     var improveP = ndx.dimension(dc.pluck('improveP'));
     var perGroup = improveP.group();
 
-    dc.rowChart("#results")
+    dc.barChart("#results")
         .width(250)
         .height(200)
         .dimension(improveP)
         .group(perGroup)
-        .renderLabel(true)
-        .elasticX(true)
-        .xAxis().ticks(4);
-};
+         .x(d3.scale.ordinal())
+        .xUnits(dc.units.ordinal)
+        .xAxisLabel("Medical Condition")
+        .yAxis().ticks(4);
+        
+}
 
 function show_medical_condition(ndx1) {
     var groupsDim = ndx1.dimension(dc.pluck('Groups'));
@@ -63,7 +65,7 @@ function show_medical_condition(ndx1) {
     dc.selectMenu("#medicalCondition")
         .dimension(groupsDim)
         .group(groupG);
-};
+}
 
 function show_improvement_percentage_per_med_cond(ndx1) {
     var groupsDim = ndx1.dimension(dc.pluck('Groups'));
@@ -117,4 +119,5 @@ function show_improvement_percentage_per_med_cond(ndx1) {
         .xAxisLabel("Medical Condition")
         .yAxis().ticks(4);
 
-};
+}
+});
