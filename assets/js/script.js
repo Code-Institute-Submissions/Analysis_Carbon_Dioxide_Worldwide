@@ -1,8 +1,8 @@
 $(document).ready(function(){
 //Using Queue.js for waiting the external data to be loaded
 queue()
-    .defer(d3.csv, "../data/Reiki_study_data.csv")
-    .defer(d3.csv, "../data/Reiki_study_condition.csv")
+    .defer(d3.csv, "data/Reiki_study_data.csv")
+    .defer(d3.csv, "data/Reiki_study_condition.csv")
     .await(makeResults);
 
 function makeResults(error, reikiDataGroups, reikiStudyCondition) {
