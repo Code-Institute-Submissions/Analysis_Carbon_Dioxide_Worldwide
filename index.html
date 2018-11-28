@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Deforestation in Romania</title>
+    <title>Fossil-Fuel CO2 Emissions by Region</title>
 
     <!-- bootstrap css -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -18,13 +18,23 @@
 
 <body>
 
-    <!-- Describing the project's name and usefulness of meditating -->
+    <!-- Describing the project's name -->
     <header>
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
-                    <h1 class="h1 text-center">Illegal Logging in Romania</h1>
-                    <p class="p1">GreenPeace reports from 2009-2016</p>
+                    <h1 class="h1 text-center">Fossil-Fuel CO2 Emissions by Region</h1>
+                    <p class="p1">Publications containing historical energy statistics make it possible to estimate fossil fuel CO2 emissions back to 1751. Etemad et al. (1991) published a summary compilation that tabulates coal, brown coal, peat, and crude oil production
+                        by nation and year. Footnotes in the Etemad et al.(1991) publication extend the energy statistics time series back to 1751. Summary compilations of fossil fuel trade were published by Mitchell (1983, 1992, 1993, 1995). Mitchell's
+                        work tabulates solid and liquid fuel imports and exports by nation and year. These pre-1950 production and trade data were digitized and CO2 emission calculations were made following the procedures discussed in Marland and Rotty
+                        (1984) and Boden et al. (1995). Further details on the contents and processing of the historical energy statistics are provided in Andres et al. (1999).
+                    </p>
+                    <p class="txt">The 1950 to present CO2 emission estimates are derived primarily from energy statistics published by the United Nations (2017), using the methods of Marland and Rotty (1984). The energy statistics were compiled primarily from annual
+                        questionnaires distributed by the U.N. Statistical Office and supplemented by official national statistical publications. As stated in the introduction of the Statistical Yearbook, "in a few cases, official sources are supplemented
+                        by other sources and estimates, where these have been subjected to professional scrutiny and debate and are consistent with other independent sources." Data from the U.S. Department of Interior's Geological Survey (USGS 2017) were
+                        used to estimate CO2 emitted during cement production. Values for emissions from gas flaring were derived primarily from U.N. data but were supplemented with data from the U.S. Department of Energy's Energy Information Administration
+                        (1994), Rotty (1974), and data provided by G. Marland. Greater details about these methods are provided in Marland and Rotty (1984), Boden et al. (1995), and Andres et al. (1999).
+                    </p>
                 </div>
             </div>
         </div>
@@ -33,64 +43,81 @@
         <section>
             <!-- Show the research paper by year / cateogory -->
 
-            <div class="container">
-                <div class="row">
-                    <div class="col-6">
-                        <h2>Total prejudice in Euro per county</h2>
-                    </div>
-                    <div class="col-6">
-                        <div id="county"></div>
-                    </div>
-                    <div class="col-6">
-                        <div id="prejudicePerCounty"></div>
-                    </div>
-                    <div class="col-6">
-                        <div id="totalPeriodPrejudice"></div>
-                    </div>
-                </div>
-            </div>
-
-        </section>
-        <section>
-            <!-- Category subject for research paper -->
-
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-12">
-                        <h2>Illegal cutting of trees between 2009-2016 </h2>
+
+                    <div class="col-2">
+                        <h2>Select Region</h2>
+                        <div id="region"></div>
                     </div>
                     <div class="col-4">
-                        <div id="totalCutting"></div>
+                        <div id="total_emission"></div>
+                        <p>thousand metric tons of C</p>
                     </div>
-                     <div class="col-4">
-                        <div id="woodVolumePerCounty"></div>
+                    <div class="col-6">
+                        <h2>Years graph</h2>
+                        <div id="years_total_emissions"></div>
                     </div>
-                     <div class="col-4">
-                        <div id="totalWoodVolume"></div>
-                    </div>
+
                 </div>
             </div>
 
         </section>
         <section>
-            <!-- Search research paper by year -->
+            <!-- Types of fossil fuels -->
 
-            <div class="container-fluid">
+            <div class="container-fluid my-4">
                 <div class="row">
-                    <div class="col-12">
-                        <h2>Total trees illegally cut per county</h2>
+                    <div class="col-4">
+                        <h2 class="h2 my-5">Emissions from solid fuels consumption</h2>
+                        <div id="Emissions_from_solid_fuel_consumption"></div>
                     </div>
-                    <div class="col-12">
-                        <div id="total_trees_per_county"></div>
+                    <div class="col-4">
+                        <h2 class="h2 my-5">Emissions from liquid fuel consumption</h2>
+                        <div id="Emissions_from_liquid_fuel_consumption"></div>
+                    </div>
+                    <div class="col-4">
+                        <h2 class="h2 my-5">Emissions from gas fuel consumption</h2>
+                        <div id="Emissions_from_gas_fuel_consumption"></div>
                     </div>
                 </div>
             </div>
-
         </section>
-        
+
+        <section>
+            <div class="container-fluid my-4">
+                <div class="row">
+                    <div class="col-6">
+                        <h2 class="h2 my-5">Emissions from cement production</h2>
+                        <div id="Emissions_from_cement_production"></div>
+                    </div>
+                    <div class="col-6">
+                        <h2 class="h2 my-5">Emissions from gas flaring</h2>
+                        <div id="Emissions_from_gas_flaring"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+       
+
     </main>
     <footer>
-
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-4">
+                    <h3 class="text-center">Source of data</h3>
+                    <p class="txt">Tom Boden and Bob Andres (Oak Ridge National Laboratory); Gregg Marland (Appalachian State University)</p>
+                </div>
+                <div class="col-4">
+                    <h3 class="text-center">Carbon Dioxide Information Analysis Center</h3>
+                    <a href="https://cdiac.ess-dive.lbl.gov/" class="link">CDIAC official site</a>
+                </div>
+                <div class="col-4">
+                    <h3 class="text-center">Design and implementation</h3>
+                    <p class="txt">Samuel Morarescu</p>
+                </div>
+            </div>
+        </div>
     </footer>
 
     <!--Bootstrap and D3, DC, Crossfilter, Query scripts-->
@@ -101,7 +128,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-   
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crossfilter/1.3.12/crossfilter.min.js"></script>
 
