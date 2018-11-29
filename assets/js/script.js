@@ -146,54 +146,55 @@ $(document).ready(function() {
                 return 0;
             }
         });
-
+    
         compositeChart
-            .width(800)
-            .height(300)
+            .width(window.innerWidth-10)
+            .height(window.innerHeight-10)
             .transitionDuration(1500)
             .margins({ top: 10, right: 10, bottom: 40, left: 62 })
             .dimension(yearDim)
             .elasticX(true)
-            .xAxisPadding(50)
             .brushOn(false)
             .x(d3.time.scale().domain([minDate, maxDate]))
             .yAxisLabel("Total Emissions per Region")
             .legend(dc.legend().x(80).y(20).itemHeight(13).gap(5))
             .renderHorizontalGridLines(true)
             .compose([
-                dc.barChart(compositeChart)
+                dc.lineChart(compositeChart)
                 .colors('yellow')
                 .group(africaTotalEmissionsinYears, 'Africa'),
-                dc.barChart(compositeChart)
+                dc.lineChart(compositeChart)
                 .colors('blue')
                 .group(developingAmericaTotalEmissionsinYears, 'Developing America'),
-                dc.barChart(compositeChart)
+                dc.lineChart(compositeChart)
                 .colors('purple')
                 .group(asiaTotalEmissionsinYears, 'Asia'),
-                dc.barChart(compositeChart)
+                dc.lineChart(compositeChart)
                 .colors('orange')
                 .group(europeTotalEmissionsinYears, 'Europe'),
-                dc.barChart(compositeChart)
+                dc.lineChart(compositeChart)
                 .colors('brown')
                 .group(farEastTotalEmissionsinYears, 'Far East'),
-                dc.barChart(compositeChart)
+                dc.lineChart(compositeChart)
                 .colors('black')
                 .group(germanyTotalEmissionsinYears, 'Germany'),
-                dc.barChart(compositeChart)
-                .colors('black')
+                dc.lineChart(compositeChart)
+                .colors('#4E9258')
                 .group(middleEastTotalEmissionsinYears, 'Middle East'),
-                dc.barChart(compositeChart)
+                dc.lineChart(compositeChart)
                 .colors('steelblue')
                 .group(northAmericaTotalEmissionsinYears, 'North America'),
-                dc.barChart(compositeChart)
+                dc.lineChart(compositeChart)
                 .colors('skyblue')
                 .group(oceaniaTotalEmissionsinYears, 'Oceania'),
-                dc.barChart(compositeChart)
-                .colors('purple')
+                dc.lineChart(compositeChart)
+                .colors('turquoise')
                 .group(westernEuropeTotalEmissionsinYears, 'Western Europe'),
             ])
             .brushOn(false)
             .renderLabel(true);
+             apply_resizing(compositeChart, 10);
+            
     }
 
     function show_emissions_from_solid_fuel_consumption(ndx) {

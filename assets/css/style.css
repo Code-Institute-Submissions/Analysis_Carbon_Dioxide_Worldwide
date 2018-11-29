@@ -3,3 +3,8 @@
     background-position: center;
     background-repeat: no-repeat;
 }*/
+
+#parentOf{
+    position:relative;
+    width:800px;
+}
