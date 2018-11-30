@@ -50,7 +50,7 @@ $(document).ready(function() {
             .width(525)
             .height(300)
             .transitionDuration(1500)
-            .legend(dc.legend().x(-18).y(20).itemHeight(15).gap(7))
+            .legend(dc.legend().x(5).y(20).itemHeight(15).gap(7))
             .innerRadius(20)
             .dimension(regionDim)
             .group(totalEmissionGroup);
@@ -151,7 +151,7 @@ $(document).ready(function() {
             .width(600)
             .height(400)
             .transitionDuration(1500)
-            .margins({ top: 10, right: 10, bottom: 40, left: 62 })
+            .margins({ top: 10, right: 20, bottom: 40, left: 62 })
             .dimension(yearDim)
             .elasticX(true)
             .brushOn(false)
@@ -200,11 +200,11 @@ $(document).ready(function() {
         var solidFuelGroup = regionDim.group().reduceSum(dc.pluck('Emissions_from_solid_fuel_consumption'));
 
         solidFuel
-            .width(500)
+            .width(450)
             .height(400)
             .dimension(regionDim)
             .group(solidFuelGroup)
-            .margins({ top: 20, right: 10, bottom: 80, left: 64 })
+            .margins({ top: 20, right: 50, bottom: 85, left: 66 })
             .transitionDuration(2500)
             .x(d3.scale.ordinal())
             .xUnits(dc.units.ordinal)
@@ -217,7 +217,7 @@ $(document).ready(function() {
                 .style("text-anchor", "start")
                 .attr("dx", "0.2em")
                 .attr("dy", "0.4em")
-                .attr("transform", "rotate(25)")
+                .attr("transform", "rotate(40)")
         });
 
     }
@@ -227,11 +227,11 @@ $(document).ready(function() {
         var liquidFuelGroup = regionDim.group().reduceSum(dc.pluck('Emissions_from_liquid_fuel_consumption'));
 
         liquidFuel
-            .width(500)
+            .width(450)
             .height(400)
             .dimension(regionDim)
             .group(liquidFuelGroup)
-            .margins({ top: 20, right: 10, bottom: 80, left: 64 })
+            .margins({ top: 20, right: 50, bottom: 85, left: 66 })
             .transitionDuration(1500)
             .x(d3.scale.ordinal())
             .xUnits(dc.units.ordinal)
@@ -243,7 +243,7 @@ $(document).ready(function() {
                 .style("text-anchor", "start")
                 .attr("dx", "0.2em")
                 .attr("dy", "0.4em")
-                .attr("transform", "rotate(25)")
+                .attr("transform", "rotate(40)")
         });
 
     }
@@ -253,11 +253,11 @@ $(document).ready(function() {
         var gasFuelGroup = regionDim.group().reduceSum(dc.pluck('Emissions_from_gas_fuel_consumption'));
 
         gasFuel
-            .width(500)
+            .width(450)
             .height(400)
             .dimension(regionDim)
             .group(gasFuelGroup)
-            .margins({ top: 20, right: 10, bottom: 80, left: 64 })
+            .margins({ top: 20, right: 50, bottom: 85, left: 66 })
             .transitionDuration(1500)
             .x(d3.scale.ordinal())
             .xUnits(dc.units.ordinal)
@@ -269,7 +269,7 @@ $(document).ready(function() {
                 .style("text-anchor", "start")
                 .attr("dx", "0.2em")
                 .attr("dy", "0.4em")
-                .attr("transform", "rotate(25)")
+                .attr("transform", "rotate(40)")
         });
 
     }
@@ -279,11 +279,11 @@ $(document).ready(function() {
         var cementGroup = regionDim.group().reduceSum(dc.pluck('Emissions_from_cement_production'));
 
         cementProduction
-            .width(500)
+            .width(450)
             .height(400)
             .dimension(regionDim)
             .group(cementGroup)
-            .margins({ top: 20, right: 10, bottom: 80, left: 64 })
+            .margins({ top: 20, right: 50, bottom: 80, left: 66 })
             .transitionDuration(1500)
             .x(d3.scale.ordinal())
             .xUnits(dc.units.ordinal)
@@ -305,11 +305,11 @@ $(document).ready(function() {
         var gasFlaringGroup = regionDim.group().reduceSum(dc.pluck('Emissions_from_gas_flaring'));
 
         gasFlaring
-            .width(500)
+            .width(450)
             .height(400)
             .dimension(regionDim)
             .group(gasFlaringGroup)
-            .margins({ top: 20, right: 10, bottom: 80, left: 64 })
+            .margins({ top: 20, right: 50, bottom: 80, left: 66 })
             .transitionDuration(1500)
             .x(d3.scale.ordinal())
             .xUnits(dc.units.ordinal)
