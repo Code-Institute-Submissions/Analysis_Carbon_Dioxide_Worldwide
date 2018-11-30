@@ -148,8 +148,8 @@ $(document).ready(function() {
         });
     
         compositeChart
-            .width(window.innerWidth-10)
-            .height(window.innerHeight-10)
+            .width(600)
+            .height(400)
             .transitionDuration(1500)
             .margins({ top: 10, right: 10, bottom: 40, left: 62 })
             .dimension(yearDim)
@@ -193,8 +193,6 @@ $(document).ready(function() {
             ])
             .brushOn(false)
             .renderLabel(true);
-             apply_resizing(compositeChart, 10);
-            
     }
 
     function show_emissions_from_solid_fuel_consumption(ndx) {
@@ -206,7 +204,7 @@ $(document).ready(function() {
             .height(400)
             .dimension(regionDim)
             .group(solidFuelGroup)
-            .margins({ top: 20, right: 60, bottom: 80, left: 70 })
+            .margins({ top: 20, right: 10, bottom: 80, left: 64 })
             .transitionDuration(2500)
             .x(d3.scale.ordinal())
             .xUnits(dc.units.ordinal)
@@ -233,7 +231,7 @@ $(document).ready(function() {
             .height(400)
             .dimension(regionDim)
             .group(liquidFuelGroup)
-            .margins({ top: 20, right: 60, bottom: 80, left: 70 })
+            .margins({ top: 20, right: 10, bottom: 80, left: 64 })
             .transitionDuration(1500)
             .x(d3.scale.ordinal())
             .xUnits(dc.units.ordinal)
@@ -259,7 +257,7 @@ $(document).ready(function() {
             .height(400)
             .dimension(regionDim)
             .group(gasFuelGroup)
-            .margins({ top: 20, right: 60, bottom: 80, left: 70 })
+            .margins({ top: 20, right: 10, bottom: 80, left: 64 })
             .transitionDuration(1500)
             .x(d3.scale.ordinal())
             .xUnits(dc.units.ordinal)
@@ -285,7 +283,7 @@ $(document).ready(function() {
             .height(400)
             .dimension(regionDim)
             .group(cementGroup)
-            .margins({ top: 20, right: 60, bottom: 80, left: 70 })
+            .margins({ top: 20, right: 10, bottom: 80, left: 64 })
             .transitionDuration(1500)
             .x(d3.scale.ordinal())
             .xUnits(dc.units.ordinal)
@@ -311,7 +309,7 @@ $(document).ready(function() {
             .height(400)
             .dimension(regionDim)
             .group(gasFlaringGroup)
-            .margins({ top: 20, right: 60, bottom: 80, left: 70 })
+            .margins({ top: 20, right: 10, bottom: 80, left: 64 })
             .transitionDuration(1500)
             .x(d3.scale.ordinal())
             .xUnits(dc.units.ordinal)

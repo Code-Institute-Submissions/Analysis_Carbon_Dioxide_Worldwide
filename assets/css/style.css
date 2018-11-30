@@ -1,10 +1,10 @@
-/*body{
-    background-image: url("/assets/images/meditation_background.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-}*/
+#total_emission, #years_total_emissions, #Emissions_from_solid_fuel_consumption, #Emissions_from_liquid_fuel_consumption, #Emissions_from_gas_fuel_consumption, #Emissions_from_cement_production, #Emissions_from_gas_flaring{
+    width:100%;
+}
 
-#parentOf{
-    position:relative;
-    width:800px;
+.charts{
+    overflow: hidden;
+}
+.dcCharts{
+    float:left;
 }
