@@ -24,14 +24,14 @@
             <div class="row">
                 <div class="col-12">
                     <h1 class="h1 text-center">Fossil-Fuel CO2 Emissions by Region</h1>
-                    <p>
-
-                        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">
-                            Toggle both elements</button>
+                    <!-- More information regarding the scope of the project -->
+                    <p class="text-center my-3">
+                        <button class="btn btn-info rounded-circle co2" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="collapse1 collapse2">
+                            CO2</button>
                     </p>
                 </div>
                 <div class="col-12 col-lg-6">
-                    <div class="collapse multi-collapse" id="multiCollapseExample1">
+                    <div class="collapse multi-collapse" id="collapse1">
                         <div class="card card-body">
                             <p class="p-4 text-justify">Publications containing historical energy statistics make it possible to estimate fossil fuel CO2 emissions back to 1751. Etemad et al. (1991) published a summary compilation that tabulates coal, brown coal, peat, and crude
                                 oil production by nation and year. Footnotes in the Etemad et al.(1991) publication extend the energy statistics time series back to 1751. Summary compilations of fossil fuel trade were published by Mitchell (1983, 1992,
@@ -42,7 +42,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-lg-6">
-                    <div class="collapse multi-collapse" id="multiCollapseExample2">
+                    <div class="collapse multi-collapse" id="collapse2">
                         <div class="card card-body">
                             <p class="p-4 text-justify">The 1950 to present CO2 emission estimates are derived primarily from energy statistics published by the United Nations (2017), using the methods of Marland and Rotty (1984). The energy statistics were compiled primarily from
                                 annual questionnaires distributed by the U.N. Statistical Office and supplemented by official national statistical publications. As stated in the introduction of the Statistical Yearbook, "in a few cases, official sources
@@ -61,20 +61,21 @@
     </header>
     <main>
         <section>
-            <!-- Show the research paper by year / cateogory -->
+            <!-- Select region / pieChart of total CO2 per region / compositeChart of total CO2 per region in years-->
 
             <div class="container-fluid">
                 <div class="row no-gutters">
 
-                    <div class="col-12 p-4 text-center">
+                    <div class="col-12 p-4 text-center charts">
                         <h2 class="h2 text-center">Select Region</h2>
-                        <div id="region"></div>
+                        <div id="region" class="dcCharts"></div>
                     </div>
                     <div class="col-12  col-lg-8 col-xl-5 p-4 text-center charts">
+                        <h3 class="h3 mb-5 text-center">Total CO2 emissions per region</h3>
                         <div id="total_emission"></div>
                     </div>
                     <div class="d-none d-sm-block p-4 col-md-12 col-xl-7 text-center charts">
-                        <h2 class="h2 text-center">Years graph</h2>
+                        <h3 class="h3 text-center">Total CO2 per region from 1751-2014</h3>
                         <div id="years_total_emissions" class="dcCharts"></div>
 
                     </div>
@@ -89,15 +90,15 @@
             <div class="container-fluid my-2">
                 <div class="row">
                     <div class="col-12  col-lg-6 col-xl-4 p-4 text-center charts">
-                        <h2 class="h2 my-2 text-center">Emissions from solid fuels consumption</h2>
+                        <h3 class="h3 mb-3 text-center">Emissions from solid fuels consumption</h3>
                         <div id="Emissions_from_solid_fuel_consumption" class="dcCharts"></div>
                     </div>
                     <div class="col-12  col-lg-6 col-xl-4 p-lg-4 p-4 text-center charts">
-                        <h2 class="h2 my-2 text-center">Emissions from liquid fuel consumption</h2>
+                        <h3 class="h3 mb-3 text-center">Emissions from liquid fuel consumption</h3>
                         <div id="Emissions_from_liquid_fuel_consumption" class="dcCharts"></div>
                     </div>
                     <div class="col-12  col-lg-12 col-xl-4 p-4 text-center charts">
-                        <h2 class="h2 my-1 text-center">Emissions from gas fuel consumption</h2>
+                        <h3 class="h3 mb-3 text-center">Emissions from gas fuel consumption</h3>
                         <div id="Emissions_from_gas_fuel_consumption" class="dcCharts"></div>
                     </div>
                 </div>
@@ -108,11 +109,11 @@
             <div class="container-fluid my-2">
                 <div class="row">
                     <div class="col-12 col-lg-6 p-4 text-center charts">
-                        <h2 class="h2 my-1 text-center">Emissions from cement production</h2>
+                        <h3 class="h3 mb-3 text-center">Emissions from cement production</h3>
                         <div id="Emissions_from_cement_production" class="dcCharts"></div>
                     </div>
                     <div class="col-12 col-lg-6 p-4 text-center charts">
-                        <h2 class="h2 text-center my-1">Emissions from gas flaring</h2>
+                        <h3 class="h3 text-center mb-3">Emissions from gas flaring</h3>
                         <div id="Emissions_from_gas_flaring" class="dcCharts"></div>
                     </div>
                 </div>
@@ -125,16 +126,17 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12 col-lg-4">
-                    <h3 class="text-center">Source of data</h3>
-                    <p class="text-center">Tom Boden and Bob Andres (Oak Ridge National Laboratory); Gregg Marland (Appalachian State University)</p>
+                    <h4 class="text-center">Source of data</h4>
+                    <p class="text-center">Tom Boden and Bob Andres (Oak Ridge National Laboratory)<br/>
+                    Gregg Marland (Appalachian State University)</p>
                 </div>
                 <div class="col-12 col-lg-4">
-                    <h3 class="text-center">Carbon Dioxide Information Analysis Center</h3>
-                    <p><a href="https://cdiac.ess-dive.lbl.gov/" class="badge badge-info text-center">CDIAC official site</a></p>
+                    <h4 class="text-center">Carbon Dioxide Information Analysis Center</h4>
+                 <p class="text-center"> <a href="https://cdiac.ess-dive.lbl.gov/" class="badge badge-info text-center"><img src="assets/images/CDIAC_official_logo.png" class="img-fluid" alt="Carbon Dioxide Information Analysis Center" /></a></p>
                 </div>
                 <div class="col-12 col-lg-4">
-                    <h3 class="text-center">Design and implementation</h3>
-                    <p class="text-center">Samuel Morarescu</p>
+                    <h4 class="text-center">Design and implementation</h4>
+                    <p class="text-center">Samuel-Nataniel Morarescu</p>
                 </div>
             </div>
         </div>

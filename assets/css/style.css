@@ -1,10 +1,40 @@
-#total_emission, #years_total_emissions, #Emissions_from_solid_fuel_consumption, #Emissions_from_liquid_fuel_consumption, #Emissions_from_gas_fuel_consumption, #Emissions_from_cement_production, #Emissions_from_gas_flaring{
-    width:100%;
+@import url('https://fonts.googleapis.com/css?family=Enriqueta');
+body {
+    font-family: 'Enriqueta', serif;
 }
 
-.charts{
-    overflow: hidden;
+.co2 {
+    -webkit-box-shadow: 0px 0px 5px 4px rgba(192, 192, 192, 0.75);
+    -moz-box-shadow: 0px 0px 5px 4px rgba(192, 192, 192, 0.75);
+    box-shadow: 0px 0px 5px 4px rgba(192, 192, 192, 0.75);
+    transition: all .4s;
 }
-.dcCharts{
-    float:left;
+
+.co2:hover {
+    transform: translateY(6px);
+}
+
+#region,
+#total_emission,
+#years_total_emissions,
+#Emissions_from_solid_fuel_consumption,
+#Emissions_from_liquid_fuel_consumption,
+#Emissions_from_gas_fuel_consumption,
+#Emissions_from_cement_production,
+#Emissions_from_gas_flaring {
+    width: 100%;
+}
+
+.charts {
+    overflow: scroll;
+}
+
+.dcCharts {
+    float: left;
+}
+
+@media only screen and (min-width:768px) {
+    .charts {
+        overflow: visible;
+    }
 }
