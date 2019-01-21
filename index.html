@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dc/2.1.8/dc.min.css" />
     <!-- style css -->
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 </head>
 
 <body>
@@ -61,6 +61,13 @@
     </header>
     <main>
         <section>
+            <!-- Reset button for all charts -->
+            <div class="chart col-sm-12" id="reset">
+               
+            </div>
+
+        </section>
+        <section>
             <!-- Select region / pieChart of total CO2 per region / compositeChart of total CO2 per region in years-->
 
             <div class="container-fluid">
@@ -69,6 +76,11 @@
                     <div class="col-12 p-4 text-center charts">
                         <h2 class="h2 text-center">Select Region</h2>
                         <div id="region" class="dcCharts"></div>
+                            <div id="reset-box"> <a id="reset" href="javascript:dc.filterAll(); dc.renderAll();">
+                                <i class="fas fa-redo"></i>
+                                </a>
+                                <span>Reset all charts to default state</span>
+                            </div>
                     </div>
                     <div class="col-12 col-md-12 col-xl-5 p-4 text-center charts">
                         <h3 class="h3 mb-5 text-center">Total CO2 emissions per region</h3>
@@ -127,12 +139,11 @@
             <div class="row">
                 <div class="col-12 col-lg-4">
                     <h4 class="text-center">Source of data</h4>
-                    <p class="text-center">Tom Boden and Bob Andres (Oak Ridge National Laboratory)<br/>
-                    Gregg Marland (Appalachian State University)</p>
+                    <p class="text-center">Tom Boden and Bob Andres (Oak Ridge National Laboratory)<br/> Gregg Marland (Appalachian State University)</p>
                 </div>
                 <div class="col-12 col-lg-4">
                     <h4 class="text-center">Carbon Dioxide Information Analysis Center</h4>
-                 <p class="text-center"> <a href="https://cdiac.ess-dive.lbl.gov/" class="badge badge-info text-center"><img src="assets/images/CDIAC_official_logo.png" class="img-fluid" alt="Carbon Dioxide Information Analysis Center" /></a></p>
+                    <p class="text-center"> <a href="https://cdiac.ess-dive.lbl.gov/" class="badge badge-info text-center"><img src="assets/images/CDIAC_official_logo.png" class="img-fluid" alt="Carbon Dioxide Information Analysis Center" /></a></p>
                 </div>
                 <div class="col-12 col-lg-4">
                     <h4 class="text-center">Design and implementation</h4>
@@ -157,7 +168,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dc/2.1.8/dc.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/queue-async/1.0.7/queue.min.js"></script>
     <!-- Script -->
-    <script  src="assets/js/script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
