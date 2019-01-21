@@ -25,16 +25,17 @@ We can see the fluctuation of total carbon emissions per year, in the time span 
 
  **Home page - index.html**
    1. CO2 button - the user can click to toggle between showing text information or hide it to better view the charts.
-   2. SelectAll menu - for selecting desired region if any.
-   3. pieChart - represents total emissions of CO2 per Region.
-   4. compositeChart - represents total emissions of CO2 from 1751-2014 of the regions.
-   5. The next five charts are 5 in number as follows:
+   2. SelectAll menu - for selecting desired region if any.  
+   3. SelectAll menu - for selecting desired region if any.
+   4. pieChart - represents total emissions of CO2 per Region.
+   5. compositeChart - represents total emissions of CO2 from 1751-2014 of the regions.
+   6. The next five charts are 5 in number as follows:
       - barChart to represent **total emissions from solid fuels consumption per region**;
        - barChart to represent **total emissions from liquid fuel consumption per region**;
         - barChart to represent **total emissions from gas fuel consumption per region**;
          - barChart to represent **total emissions from cement production per region**;
           - barChart to represent **total emissions from emissions from gas flaring per region**;
-   6. Logo of CDIAC with link to the official website.
+   7. Logo of CDIAC with link to the official website.
 ###### **_Features left to implement_**
 
   1. Creating second webpage with data from CDIAC with CO2 emissions per country from 1751-2014;
