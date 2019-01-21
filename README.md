@@ -14,8 +14,6 @@ regions can be selected from the **Select region** menu and the charts are rearr
 The user can better see per region the emissions from different fossil fuels or cement production or in relation to another region by selecting the region wanted from the pie chart.
 We can see the fluctuation of total carbon emissions per year, in the time span of 1751-2014.
 
-###### User stories
-
 
 
 ## Features
