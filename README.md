@@ -26,7 +26,7 @@ We can see the fluctuation of total carbon emissions per year, in the time span 
  **Home page - index.html**
    1. CO2 button - the user can click to toggle between showing text information or hide it to better view the charts.
    2. SelectAll menu - for selecting desired region if any.  
-   3. SelectAll menu - for selecting desired region if any.
+   3. Reset button - for reseting all charts to default state.
    4. pieChart - represents total emissions of CO2 per Region.
    5. compositeChart - represents total emissions of CO2 from 1751-2014 of the regions.
    6. The next five charts are 5 in number as follows:
